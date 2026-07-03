@@ -1,14 +1,14 @@
-# 🌐 Alan Thomas Portfolio
+#  Alan Thomas Portfolio
 
 A modern and responsive personal portfolio website built using **React + Vite** to showcase my skills, experience, projects, and contact information.
 
-## 🚀 Live Demo
+##  Live Demo
 
 🔗 https://alan-thomas-portfolio.vercel.app/
 
 ---
 
-## ✨ Features
+##  Features
 
 - Responsive Design
 - Modern UI
@@ -24,7 +24,7 @@ A modern and responsive personal portfolio website built using **React + Vite** 
 
 ---
 
-## 🛠️ Tech Stack
+##  Tech Stack
 
 - React.js
 - Vite
@@ -38,7 +38,7 @@ A modern and responsive personal portfolio website built using **React + Vite** 
 
 ---
 
-## 📦 Installation
+##  Installation
 
 Clone the repository
 
@@ -72,20 +72,6 @@ npm run build
 
 ---
 
-## 📁 Project Structure
-
-```text
-src/
-├── assets/
-├── components/
-├── App.jsx
-├── App.css
-├── main.jsx
-
-public/
-```
-
----
 
 ##  Live Website
 
