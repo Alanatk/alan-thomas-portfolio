@@ -1,18 +1,102 @@
-# React + Vite
+# 🌐 Alan Thomas Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+A modern and responsive personal portfolio website built using **React + Vite** to showcase my skills, experience, projects, and contact information.
 
-Currently, two official plugins are available:
+## 🚀 Live Demo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+🔗 https://alan-thomas-portfolio.vercel.app/
 
-## React Compiler
+---
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+## ✨ Features
 
-Note: This will impact Vite dev & build performances.
+- Responsive Design
+- Modern UI
+- Hero Section
+- Skills Section
+- Education Timeline
+- Project Showcase
+- Resume Download
+- Contact Form (EmailJS)
+- Scroll Animations (AOS)
+- Scroll To Top Button
+- Preloader Animation
 
-## Expanding the Oxlint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+## 🛠️ Tech Stack
+
+- React.js
+- Vite
+- JavaScript (ES6)
+- HTML5
+- CSS3
+- EmailJS
+- AOS
+- React Icons
+- React Type Animation
+
+---
+
+## 📦 Installation
+
+Clone the repository
+
+```bash
+git clone https://github.com/Alanatk/alan-thomas-portfolio.git
+```
+
+Navigate to the project
+
+```bash
+cd alan-thomas-portfolio
+```
+
+Install dependencies
+
+```bash
+npm install
+```
+
+Start the development server
+
+```bash
+npm run dev
+```
+
+Build for production
+
+```bash
+npm run build
+```
+
+---
+
+## 📁 Project Structure
+
+```text
+src/
+├── assets/
+├── components/
+├── App.jsx
+├── App.css
+├── main.jsx
+
+public/
+```
+
+---
+
+##  Live Website
+
+https://alan-thomas-portfolio.vercel.app/
+
+---
+
+##  License
+
+This project is licensed under the MIT License.
+
+---
+
+⭐ If you like this project, consider giving it a star.
