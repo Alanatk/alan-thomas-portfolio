@@ -8,7 +8,7 @@ function Projects() {
         "Machine learning application that predicts Bitcoin prices using historical cryptocurrency market data.",
       tech: ["Python", "Machine Learning", "Pandas", "Scikit-learn"],
       github: "https://github.com/Alanatk/Bitcoin-price-predictor",
-      live: "#",
+      live: "https://bitcoin-price-predictor-lqzo.onrender.com",
     },
     {
       title: "MNIST Digit Recognition",
