@@ -42,7 +42,7 @@ function Hero() {
         <div className="buttons">
          <a
             href={resume}
-            download="Alan_Thomas_Resume.pdf"
+            download="ALAN THOMAS.pdf"
             className="btn"
          >
            Download Resume
