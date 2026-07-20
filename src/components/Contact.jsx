@@ -19,20 +19,20 @@ function Contact() {
 
     emailjs
       .sendForm(
-        "service_vrkxs0q",
-        "template_16k7mb9",
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
         form.current,
-        "Dx_AkYLjxu-HijD_T"
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
       )
       .then(
         () => {
-          alert(" Message sent successfully!");
+          alert("Message sent successfully!");
           form.current.reset();
           setLoading(false);
         },
         (error) => {
-          console.log(error.text);
-          alert(" Failed to send message.");
+          console.error(error);
+          alert("Failed to send message.");
           setLoading(false);
         }
       );
@@ -44,7 +44,6 @@ function Contact() {
 
       <div className="contact-container">
         {/* Left Side */}
-
         <div className="contact-info">
           <h3>Let's Connect</h3>
 
@@ -88,7 +87,6 @@ function Contact() {
         </div>
 
         {/* Right Side */}
-
         <form
           ref={form}
           className="contact-form"
@@ -115,7 +113,7 @@ function Contact() {
             required
           ></textarea>
 
-          <button type="submit">
+          <button type="submit" disabled={loading}>
             {loading ? "Sending..." : "Send Message"}
           </button>
         </form>
