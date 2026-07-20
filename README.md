@@ -1,18 +1,62 @@
-# React + Vite
+# Alan Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+A personal portfolio website built with React and Vite to showcase projects, skills, experience, and contact information.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- Modern responsive UI with smooth animations
+- Project showcase and certificate gallery
+- Contact form integration using EmailJS
+- Clean navigation and sections for About, Skills, Education, Projects, and Contact
 
-## React Compiler
+## Tech Stack
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+- React
+- Vite
+- JavaScript
+- EmailJS
+- AOS (Animate On Scroll)
+- React Icons
+- React Type Animation
 
-Note: This will impact Vite dev & build performances.
+## Getting Started
 
-## Expanding the Oxlint configuration
+### Install dependencies
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+```bash
+npm install
+```
+
+### Run locally
+
+```bash
+npm run dev
+```
+
+### Build for production
+
+```bash
+npm run build
+```
+
+### Preview production build
+
+```bash
+npm run preview
+```
+
+## Project Structure
+
+- `src/` - source code for the app
+- `src/components/` - reusable React components
+- `public/` - static assets
+- `package.json` - project metadata and scripts
+
+## Notes
+
+- Update the content and links in the components to match your personal information and projects.
+- Use the `Hero`, `About`, `Skills`, `Projects`, `Certificates`, and `Contact` sections to highlight your best work.
+
+## Contact
+
+Feel free to customize this portfolio and add your own resume, project links, and social profiles.

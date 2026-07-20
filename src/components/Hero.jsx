@@ -1,7 +1,7 @@
 import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
 import { TypeAnimation } from "react-type-animation";
 import profile from "../assets/alan.png";
-import resume from "../assets/resume/Alan_Thomas_Resume.pdf";
+import resume from "../assets/resume/ALAN THOMAS.pdf";
 function Hero() {
   return (
     <section className="hero" id="home" data-aos="fade-up">
