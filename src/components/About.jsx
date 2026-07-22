@@ -9,7 +9,7 @@ function About() {
         <div className="card">
           <FaGraduationCap />
           <h3>MCA Student</h3>
-          <p>LEAD College of Management</p>
+          <p>LEAD College </p>
         </div>
 
         <div className="card">
