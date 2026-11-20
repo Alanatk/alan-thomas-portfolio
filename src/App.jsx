@@ -12,6 +12,7 @@ import Certificates from "./components/Certificates";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import ScrollToTop from "./components/ScrollToTop";
+import Experience from "./components/Experience";
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -34,6 +35,7 @@ function App() {
       <Hero />
       <About />
       <Skills />
+      <Experience />
       <Projects />
       <Education />
       <Certificates />

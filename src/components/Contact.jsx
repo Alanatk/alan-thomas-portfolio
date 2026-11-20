@@ -1,3 +1,4 @@
+
 import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 
@@ -6,51 +7,55 @@ import {
   FaMapMarkerAlt,
   FaGithub,
   FaLinkedin,
+  FaPaperPlane,
 } from "react-icons/fa";
 
 function Contact() {
   const form = useRef();
   const [loading, setLoading] = useState(false);
 
-  const sendEmail = (e) => {
+  const sendEmail = async (e) => {
     e.preventDefault();
+
+    if (loading) return;
 
     setLoading(true);
 
-    emailjs
-      .sendForm(
+    try {
+      await emailjs.sendForm(
         import.meta.env.VITE_EMAILJS_SERVICE_ID,
         import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
         form.current,
         import.meta.env.VITE_EMAILJS_PUBLIC_KEY
-      )
-      .then(
-        () => {
-          alert("Message sent successfully!");
-          form.current.reset();
-          setLoading(false);
-        },
-        (error) => {
-          console.error(error);
-          alert("Failed to send message.");
-          setLoading(false);
-        }
       );
+
+      alert("Message sent successfully!");
+      form.current.reset();
+    } catch (error) {
+      console.error("EmailJS Error:", error);
+      alert("Failed to send message. Please try again.");
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
-    <section className="contact" id="contact" data-aos="fade-up">
+    <section
+      className="contact"
+      id="contact"
+      data-aos="fade-up"
+    >
       <h2>Contact Me</h2>
 
       <div className="contact-container">
-        {/* Left Side */}
+
+        {/* Left Side - Contact Information */}
+
         <div className="contact-info">
           <h3>Let's Connect</h3>
 
           <p>
-            I'm always open to internship opportunities,
-            collaborations, and new learning experiences.
-            Feel free to contact me.
+           I'm passionate about technology and software development, and always eager to explore new opportunities, contribute to meaningful projects, and grow my technical skills.
           </p>
 
           <div className="info-item">
@@ -68,7 +73,7 @@ function Contact() {
             <a
               href="https://github.com/Alanatk"
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
             >
               github.com/Alanatk
             </a>
@@ -79,14 +84,15 @@ function Contact() {
             <a
               href="https://www.linkedin.com/in/alan-thomas-b30885276/"
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
             >
-              linkedin.com/in/alan-thomas-b30885276
+              LinkedIn Profile
             </a>
           </div>
         </div>
 
-        {/* Right Side */}
+        {/* Right Side - Contact Form */}
+
         <form
           ref={form}
           className="contact-form"
@@ -96,6 +102,8 @@ function Contact() {
             type="text"
             name="from_name"
             placeholder="Your Name"
+            aria-label="Your Name"
+            autoComplete="name"
             required
           />
 
@@ -103,6 +111,8 @@ function Contact() {
             type="email"
             name="from_email"
             placeholder="Your Email"
+            aria-label="Your Email"
+            autoComplete="email"
             required
           />
 
@@ -110,13 +120,16 @@ function Contact() {
             name="message"
             rows="6"
             placeholder="Your Message"
+            aria-label="Your Message"
             required
-          ></textarea>
+          />
 
           <button type="submit" disabled={loading}>
+            <FaPaperPlane />
             {loading ? "Sending..." : "Send Message"}
           </button>
         </form>
+
       </div>
     </section>
   );

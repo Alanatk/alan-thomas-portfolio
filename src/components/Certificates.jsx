@@ -1,8 +1,10 @@
+
 import {
   FaCertificate,
   FaCloud,
   FaRobot,
   FaShieldAlt,
+  FaExternalLinkAlt,
 } from "react-icons/fa";
 
 import oracle from "../assets/certificates/Oracle.pdf";
@@ -34,14 +36,13 @@ function Certificates() {
       icon: <FaCloud />,
       file: cloud,
     },
-
     {
       title: "Diploma in Cyber Security",
       issuer: "STED Council",
       year: "2025",
       icon: <FaShieldAlt />,
       file: cyber,
-   },
+    },
     {
       title: "ServiceNow Welcome Micro-Certification",
       issuer: "ServiceNow",
@@ -52,12 +53,19 @@ function Certificates() {
   ];
 
   return (
-    <section className="certificates" id="certificates" data-aos="zoom-in-up">
+    <section
+      className="certificates"
+      id="certificates"
+      data-aos="zoom-in-up"
+    >
       <h2>Certifications</h2>
 
       <div className="certificate-grid">
-        {certificates.map((cert, index) => (
-          <div className="certificate-card" key={index}>
+        {certificates.map((cert) => (
+          <div
+            className="certificate-card"
+            key={cert.title}
+          >
             <div className="certificate-icon">
               {cert.icon}
             </div>
@@ -66,18 +74,20 @@ function Certificates() {
 
             <p>{cert.issuer}</p>
 
-            <span>{cert.year}</span>
+            <span className="certificate-year">
+              {cert.year}
+            </span>
 
-            {cert.file && (
-              <a
-                href={cert.file}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="certificate-btn"
-              >
-                View Certificate
-              </a>
-            )}
+            <a
+              href={cert.file}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="certificate-btn"
+              aria-label={`View ${cert.title} certificate`}
+            >
+              <FaExternalLinkAlt />
+              View Certificate
+            </a>
           </div>
         ))}
       </div>
