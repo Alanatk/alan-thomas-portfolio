@@ -11,7 +11,7 @@ import PrabishaCertificate from "../assets/certificates/prabisha-internship-cert
 function Experience() {
   return (
     <section className="experience" id="experience" data-aos="fade-up">
-      <h2>My Experience</h2>
+      <h2 className="experience-heading">My Experience</h2>
 
       <div className="experience-container">
         <div className="experience-card">
@@ -27,11 +27,11 @@ function Experience() {
             <h3>AI/ML Intern</h3>
 
             <h4>
-              <FaBuilding /> Prabisha Consulting
+              <FaBuilding /> <span>Prabisha Consulting</span>
             </h4>
 
             <p className="experience-type">
-              <FaCode /> Internship | IT Department
+              <FaCode /> <span>Internship | IT Department</span>
             </p>
 
             <p className="experience-date">
@@ -48,7 +48,7 @@ function Experience() {
 
             {/* Internship Certificate */}
             <div className="experience-certificate">
-              <a
+              <a className="experience-certificate-btn"
                 href={PrabishaCertificate}
                 target="_blank"
                 rel="noreferrer"
