@@ -1,5 +1,5 @@
 import "./App.css";
-import { useEffect, useState } from "react";
+import { lazy, Suspense, useEffect, useState } from "react";
 
 import Preloader from "./components/Preloader";
 import Navbar from "./components/Navbar";
@@ -13,6 +13,8 @@ import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import ScrollToTop from "./components/ScrollToTop";
 import Experience from "./components/Experience";
+
+const Chatbot = lazy(() => import("./components/Chatbot"));
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -42,6 +44,9 @@ function App() {
       <Contact />
       <Footer />
       <ScrollToTop />
+      <Suspense fallback={null}>
+        <Chatbot />
+      </Suspense>
     </>
   );
 }

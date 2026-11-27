@@ -11,30 +11,35 @@ import {
 
 import { SiMysql } from "react-icons/si";
 
-function Skills() {
-  const skills = [
-    { icon: <FaHtml5 />, name: "HTML" },
-    { icon: <FaCss3Alt />, name: "CSS3" },
-    { icon: <FaJs />, name: "JavaScript" },
-    { icon: <FaReact />, name: "React" },
-    { icon: <FaNodeJs />, name: "Node.js" },
-    { icon: <FaPython />, name: "Python" },
-    { icon: <SiMysql />, name: "MySQL" },
-    { icon: <FaGitAlt />, name: "Git" },
-    { icon: <FaDocker />, name: "Docker" },
-  ];
+import { skills } from "../data/portfolioKnowledge";
 
+const skillIcons = {
+  HTML: FaHtml5,
+  CSS3: FaCss3Alt,
+  JavaScript: FaJs,
+  React: FaReact,
+  "Node.js": FaNodeJs,
+  Python: FaPython,
+  MySQL: SiMysql,
+  Git: FaGitAlt,
+  Docker: FaDocker,
+};
+
+function Skills() {
   return (
     <section className="skills" id="skills" data-aos="zoom-in">
       <h2>My Skills</h2>
 
       <div className="skills-grid">
-        {skills.map((skill, index) => (
-          <div className="skill-card" key={index}>
-            <div className="skill-icon">{skill.icon}</div>
-            <h3>{skill.name}</h3>
-          </div>
-        ))}
+        {skills.map((skill) => {
+          const Icon = skillIcons[skill];
+          return (
+            <div className="skill-card" key={skill}>
+              {Icon && <div className="skill-icon"><Icon /></div>}
+              <h3>{skill}</h3>
+            </div>
+          );
+        })}
       </div>
     </section>
   );

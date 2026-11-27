@@ -6,46 +6,9 @@ import {
   FaLaptopCode,
 } from "react-icons/fa";
 
-function Projects() {
-  const projects = [
-    {
-      title: "Bitcoin Price Predictor",
-      description:
-        "Machine learning application that predicts Bitcoin prices using historical cryptocurrency market data.",
-      tech: ["Python", "Machine Learning", "Pandas", "Scikit-learn"],
-      github: "https://github.com/Alanatk/Bitcoin-price-predictor",
-      live: "https://bitcoin-price-predictor-lqzo.onrender.com",
-    },
-    {
-      title: "MNIST Digit Recognition",
-      description:
-        "Deep learning application using TensorFlow and CNN to recognize handwritten digits with a Streamlit interface.",
-      tech: ["Python", "TensorFlow", "CNN", "Streamlit"],
-      github: "https://github.com/Alanatk/MNIST_digit_recognition",
-      live: "https://mnistdigitrecognition.streamlit.app/",
-    },
-    {
-      title: "Smart E-Commerce Checkout",
-      description:
-        "Responsive React checkout workflow with shopping cart, order summary, and payment interface.",
-      tech: ["React", "JavaScript", "CSS", "Vite"],
-      github:
-        "https://github.com/Alanatk/smart-ecommerce-checkout-workflow",
-      live:
-        "https://alanatk.github.io/smart-ecommerce-checkout-workflow/",
-    },
-    {
-      title: "Memory Card Matching Game",
-      description:
-        "Interactive browser game built using JavaScript with responsive design and smooth gameplay.",
-      tech: ["HTML5", "CSS3", "JavaScript"],
-      github:
-        "https://github.com/Alanatk/memory-card-matching-game",
-      live:
-        "https://memory-card-matching-game-phi.vercel.app/",
-    },
-  ];
+import { projects } from "../data/portfolioKnowledge";
 
+function Projects() {
   return (
     <section
       className="projects"

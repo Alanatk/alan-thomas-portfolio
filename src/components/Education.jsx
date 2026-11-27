@@ -6,26 +6,9 @@ import {
   FaBookOpen,
 } from "react-icons/fa";
 
-function Education() {
-  const education = [
-    {
-      degree: "Master of Computer Applications (MCA)",
-      college: "LEAD College of Management",
-      year: "2025 - 2027",
-      status: "Currently Pursuing",
-      description:
-        "Currently pursuing MCA with a focus on Software Development, Cloud Computing, and Artificial Intelligence.",
-    },
-    {
-      degree: "Bachelor of Computer Applications (BCA)",
-      college: "Sree Narayana Guru College",
-      year: "Completed",
-      status: "Graduated",
-      description:
-        "Built a strong foundation in programming, databases, networking, and web development.",
-    },
-  ];
+import { education } from "../data/portfolioKnowledge";
 
+function Education() {
   return (
     <section
       className="education"

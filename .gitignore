@@ -16,10 +16,9 @@ dist-ssr/
 
 # Local environment files
 .env
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
+.env.*
+!.env.example
+.vercel/
 *.local
 
 # Editor directories and files
@@ -39,3 +38,5 @@ Thumbs.db
 
 # Swap files
 *.sw?
+
+.vercel

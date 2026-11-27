@@ -1,4 +1,3 @@
-
 import {
   FaCertificate,
   FaCloud,
@@ -7,51 +6,12 @@ import {
   FaExternalLinkAlt,
 } from "react-icons/fa";
 
-import oracle from "../assets/certificates/Oracle.pdf";
-import ibm from "../assets/certificates/IBM.pdf";
-import servicenow from "../assets/certificates/ServiceNow.pdf";
-import cloud from "../assets/certificates/Cloud.pdf";
-import cyber from "../assets/certificates/Cyber.pdf";
+import { certificateFiles } from "../data/portfolioAssets";
+import { certificates } from "../data/portfolioKnowledge";
+
+const icons = { oracle: FaCloud, ibm: FaRobot, cloud: FaCloud, cyber: FaShieldAlt, servicenow: FaCertificate };
 
 function Certificates() {
-  const certificates = [
-    {
-      title: "Oracle Cloud Infrastructure Foundations",
-      issuer: "Oracle",
-      year: "2024",
-      icon: <FaCloud />,
-      file: oracle,
-    },
-    {
-      title: "Getting Started with Artificial Intelligence",
-      issuer: "IBM SkillsBuild",
-      year: "2025",
-      icon: <FaRobot />,
-      file: ibm,
-    },
-    {
-      title: "Diploma in Cloud Computing",
-      issuer: "STED Council",
-      year: "2024",
-      icon: <FaCloud />,
-      file: cloud,
-    },
-    {
-      title: "Diploma in Cyber Security",
-      issuer: "STED Council",
-      year: "2025",
-      icon: <FaShieldAlt />,
-      file: cyber,
-    },
-    {
-      title: "ServiceNow Welcome Micro-Certification",
-      issuer: "ServiceNow",
-      year: "2025",
-      icon: <FaCertificate />,
-      file: servicenow,
-    },
-  ];
-
   return (
     <section
       className="certificates"
@@ -61,35 +21,38 @@ function Certificates() {
       <h2>Certifications</h2>
 
       <div className="certificate-grid">
-        {certificates.map((cert) => (
-          <div
-            className="certificate-card"
-            key={cert.title}
-          >
-            <div className="certificate-icon">
-              {cert.icon}
-            </div>
-
-            <h3>{cert.title}</h3>
-
-            <p>{cert.issuer}</p>
-
-            <span className="certificate-year">
-              {cert.year}
-            </span>
-
-            <a
-              href={cert.file}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="certificate-btn"
-              aria-label={`View ${cert.title} certificate`}
+        {certificates.map((cert) => {
+          const Icon = icons[cert.id];
+          return (
+            <div
+              className="certificate-card"
+              key={cert.title}
             >
-              <FaExternalLinkAlt />
-              View Certificate
-            </a>
-          </div>
-        ))}
+              <div className="certificate-icon">
+                <Icon />
+              </div>
+
+              <h3>{cert.title}</h3>
+
+              <p>{cert.issuer}</p>
+
+              <span className="certificate-year">
+                {cert.year}
+              </span>
+
+              <a
+                href={certificateFiles[cert.id]}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="certificate-btn"
+                aria-label={`View ${cert.title} certificate`}
+              >
+                <FaExternalLinkAlt />
+                View Certificate
+              </a>
+            </div>
+          );
+        })}
       </div>
     </section>
   );

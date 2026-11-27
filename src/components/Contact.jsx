@@ -10,6 +10,8 @@ import {
   FaPaperPlane,
 } from "react-icons/fa";
 
+import { profile } from "../data/portfolioKnowledge";
+
 function Contact() {
   const form = useRef();
   const [loading, setLoading] = useState(false);
@@ -60,18 +62,18 @@ function Contact() {
 
           <div className="info-item">
             <FaEnvelope />
-            <span>alanthomask77@gmail.com</span>
+            <span>{profile.email}</span>
           </div>
 
           <div className="info-item">
             <FaMapMarkerAlt />
-            <span>Palakkad, Kerala, India</span>
+            <span>{profile.location}</span>
           </div>
 
           <div className="info-item">
             <FaGithub />
             <a
-              href="https://github.com/Alanatk"
+              href={profile.github}
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -82,7 +84,7 @@ function Contact() {
           <div className="info-item">
             <FaLinkedin />
             <a
-              href="https://www.linkedin.com/in/alan-thomas-b30885276/"
+              href={profile.linkedin}
               target="_blank"
               rel="noopener noreferrer"
             >
